@@ -1,5 +1,6 @@
-﻿Console.WriteLine("--- Улучшенный калькулятор ---");
+Console.WriteLine("--- Улучшенный калькулятор ---");
 Console.WriteLine("Доступные операции: +, -, *, /");
+Console.WriteLine();
 
 double num1 = ReadNumber();
 double num2 = ReadNumber();
@@ -12,14 +13,14 @@ Console.ReadLine();
 double ReadNumber()
 {
     Console.Write("Введите число: ");
-    string input = Console.ReadLine();
+    string input = Console.ReadLine()!;
     return Convert.ToDouble(input);
 }
 
 string ReadOperation()
 {
     Console.Write("Введите символ операции: ");
-    return Console.ReadLine();
+    return Console.ReadLine()!;
 }
 
 void CalculateAndPrint(double a, double b, string op)
@@ -43,5 +44,6 @@ void CalculateAndPrint(double a, double b, string op)
         result = a / b;
     }
 
+    Console.WriteLine();
     Console.WriteLine("Результат: " + a + " " + op + " " + b + " = " + result);
 }
